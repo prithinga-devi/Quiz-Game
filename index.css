@@ -339,3 +339,110 @@ body {
         font-size: 2rem;
     }
 }
+/* ============================= */
+/* 📱 PHONE VIEW (up to 767px) */
+/* ============================= */
+@media only screen and (max-width: 767px) {
+
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+
+  /* Background gradient adjustments */
+  .container::before,
+  .container.sign-in::before,
+  .container.sign-up::before {
+    height: 100%;
+    width: 100%;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .row {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .col {
+    width: 100%;
+    position: relative;
+    padding: 2rem 1.5rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+    box-shadow: none;
+    border-radius: 1rem;
+  }
+
+  .input-group {
+    margin: 0.8rem 0;
+  }
+
+  .input-group i {
+    font-size: 1.2rem;
+  }
+
+  .input-group input {
+    font-size: 1rem;
+    padding: 0.9rem 2.5rem;
+  }
+
+  .form button {
+    font-size: 1rem;
+    padding: 0.9rem;
+    margin-top: 0.8rem;
+  }
+
+  .text {
+    margin: 1rem 0;
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  .text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  .img img {
+    width: 65vw;
+    max-width: 250px;
+  }
+
+  /* Hide extra background transitions */
+  .content-row {
+    position: static;
+  }
+
+  /* Hide overlapping animated parts */
+  .container.sign-in .text.sign-up,
+  .container.sign-up .text.sign-in {
+    display: none;
+  }
+}
